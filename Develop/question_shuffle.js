@@ -1,3 +1,4 @@
+//create questions array
 var qAndA = [
     {
       question: "What is HTML's main use in Wev Development?",

@@ -40,9 +40,9 @@ var output = []
 
 // Create a function that grabs the current card object and displays
 // the question to the window
-// Instructor helped with functions
+// Instructor helped with functions and paraphrased them
 function displayQuestions() {
-    // Create a variable reference to the current card object from the cards array
+    // Create a variable reference to the current question ard object from the cards array
 
     var question = qAndA[currentQuestionIndex]
     questionsDisplay.classList.remove("hide")
@@ -54,13 +54,14 @@ function displayQuestions() {
     answerChoice.innerText = question.answers
 
 
-    //hide start button and call displayCard
+    //hide start button and call showAnswers
     
    
 }
 
 
-// Hide the start button and call displayCard
+// Hide the start button and call displayQuestions
+//Taught by instructor JD and paraphrased
 function startQuestions () {
   
   
@@ -72,7 +73,7 @@ function startQuestions () {
       displayQuestions()
     }
 
-  // When user clicks start button, show the first flash card
+  // When user clicks start button, show the first question
 
   nextButton.addEventListener('click', displayQuestions)
   startButton.addEventListener("click", startQuestions)
