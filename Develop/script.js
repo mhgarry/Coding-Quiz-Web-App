@@ -18,11 +18,14 @@
 
 //selection variables 
 //a selector for my start button using querySelector to target it
-var startButton = document.querySelector( "#start-button")
-var questionsDisplay = document.querySelector(".questions-display")
+var startButton = document.querySelector( "#start")
+var questionsDisplay = document.querySelector(".question-wrap")
 var timerDisplay = document.querySelector("#timer-display")
-var answerDisplay = document.querySelector("#answer-display")
+var answerDisplay = document.querySelector("#display-answers")
 var nextButton = document.querySelector("#next-button")
+var mainHeader = document.querySelector("#main-header")
+var frontPage = document.querySelector(".front-page-text")
+var answerChoice = document.querySelector(".lists")
 //to keep track of the the question index within the array
 var currentQuestionIndex = 0
 //Will hold the current question object
@@ -33,32 +36,43 @@ var answer;
 var count = 5
 
 var output = []
+
+
 // Create a function that grabs the current card object and displays
 // the question to the window
-function displayAnswers() {
+// Instructor helped with functions
+function displayQuestions() {
     // Create a variable reference to the current card object from the cards array
-    var questions = qAndA[currentCardIndex[question]]
-    
-    displayAnswers.classList.remove('hide')
-   var answerDisplay = qAndA[answers]
-    answers.innerText = answerDisplay.answers
-    answerDisplay.innerText = question.answers
-    //hide start button and call displayCard
-    answerDisplay.classList.add('hide')q
-    nextButton.classList.add('hide')
-    startTimer();
 
-    startButton.addEventListener('click', startQuestions);
-  }
+    var question = qAndA[currentQuestionIndex]
+    questionsDisplay.classList.remove("hide")
+    answerChoice.classList.remove("hide")
+    nextButton.classList.remove('hide')
+    lists.classList.remove('hide')
+    
+    questionsDisplay.innerText = question.question
+    answerChoice.innerText = question.answers
+
+
+    //hide start button and call displayCard
+    
+   
+}
 
 
 // Hide the start button and call displayCard
 function startQuestions () {
-    startButton.classList.add('hide');
-    displayQuestions();
+  
+  
+  
+  startButton.classList.add('hide')
     
-  }
+  mainHeader.classList.add('hide')
+  frontPage.classList.add('hide')
+      displayQuestions()
+    }
 
   // When user clicks start button, show the first flash card
 
-  nextBtn.addEventListener('click', displayQuestions);
+  nextButton.addEventListener('click', displayQuestions)
+  startButton.addEventListener("click", startQuestions)
