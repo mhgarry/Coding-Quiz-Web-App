@@ -15,11 +15,20 @@
 //4. create a button to log score and intials together 
 //5. create a high score log
 
+
+//selection variables 
 //a selector for my start button using querySelector to target it
-let startButton = document.querySelector('#startButton')
+var startButton = document.querySelector( "#start-button")
+var questionDisplay = document.querySelector(".question-display")
+var timerDisplay = document.querySelector("#timer-display")
+var answerDisplay = document.querySelector("#answer-display")
+var nextButton = document.querySelector("#next-button")
+//to keep track of the the question index within the array
+var currentQuestionIndex = 0
+//Will hold the current question object
+var question;
+//will hold the current answer object
+var answer;
+//will store the timer count 
+var count = 5
 
-setImmediate()
-
-
-//an addEventListener for my start button instructing it to run the function startTimer on click
-startButton.addEventListener('click', () => console.log('I am haunting you'))

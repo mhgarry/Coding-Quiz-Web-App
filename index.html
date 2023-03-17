@@ -9,16 +9,47 @@
 </head>
 
 <body>
-
-    <h1>
-        Quiz Time!
-    </h1>
-
-    <button id="startButton">
-        START
-    </button>
     
+    <section id="front-page" class= "hide"></section>
+        <h1 id="main-header" class="hide">
+        Coding Quiz Time!
+        </h1>
+     
+            <p class="front-page-text hide">
+                Press the start button to take this coding quiz challenge to test your code knowledge. When you press start a 
+                timer will start counting down at 100 seconds and you will be prompted with multiple choice questions about
+                coding to answer. If you get an answer incorrect five seconds will be deducted off of the clock. If you get a question
+                correct you will earn five points. After answering a question correctly press the next button to proceed to 
+                the next question. When you answer a question wrong you will be automatically cycled to a new question. 
+                The quiz ends when either you run out of time or go through all of the questions. At the end of the quiz you'll be 
+                prompted to enter your intials to store with your score.
+            </p>
+    </section>
+    
+    <section class="question-wrap hide">
+        <button id="start-button" class="hide">Start</button>
+        
+        <h2 id="question-display hide"></h2>
+            <ul class="display-answers hide">
+                <li id="A"></li>
+                <li id="B"></li>
+                <li id="C"></li>
+                <li id="D"></li>
+            </ul>
+
+         <h2 id="timer-display">5</section>
+    
+    <section id="answer-display"></section>
+            
+            <h2 class="correct-answer hide">Correct!</h2>
+            <h2 class="wrong-answer hide">Wrong!</h2>
+            
+            <button id="next-button" class="hide">Next</button>
+    </section>
+    
+    <script src="Develop/question_shuffle.js"></script>
     <script src="Develop/script.js"></script>
+
 </body>
 
 </html>
