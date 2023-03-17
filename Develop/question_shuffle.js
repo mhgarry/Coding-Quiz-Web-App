@@ -97,12 +97,14 @@ var qAndA = [
        //https://www.git-tower.com/learn/git/faq/git-bash#:~:text=Git%20Bash%2C%20quite%20simply%2C%20is,built%20for%20Unix%2Dstyle%20environments. referenced
         {
             question: "What is Git Bash?",
+            answers: { 
                     A: "A Mac OSX application",
                     B: "A server designated for party chat",
                     C: "A Windows application designed for Git version control",
                     D: "A website",
 
                     correctAnswer: "C"
+        }
 
         },
         //https://www.stackpath.com/edge-academy/what-is-a-web-application/ referenced 
@@ -117,4 +119,3 @@ var qAndA = [
         }
 ]
 
-console.log(qAndA)

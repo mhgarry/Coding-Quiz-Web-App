@@ -19,7 +19,7 @@
 //selection variables 
 //a selector for my start button using querySelector to target it
 var startButton = document.querySelector( "#start-button")
-var questionDisplay = document.querySelector(".question-display")
+var questionsDisplay = document.querySelector(".questions-display")
 var timerDisplay = document.querySelector("#timer-display")
 var answerDisplay = document.querySelector("#answer-display")
 var nextButton = document.querySelector("#next-button")
@@ -32,3 +32,33 @@ var answer;
 //will store the timer count 
 var count = 5
 
+var output = []
+// Create a function that grabs the current card object and displays
+// the question to the window
+function displayAnswers() {
+    // Create a variable reference to the current card object from the cards array
+    var questions = qAndA[currentCardIndex[question]]
+    
+    displayAnswers.classList.remove('hide')
+   var answerDisplay = qAndA[answers]
+    answers.innerText = answerDisplay.answers
+    answerDisplay.innerText = question.answers
+    //hide start button and call displayCard
+    answerDisplay.classList.add('hide')q
+    nextButton.classList.add('hide')
+    startTimer();
+
+    startButton.addEventListener('click', startQuestions);
+  }
+
+
+// Hide the start button and call displayCard
+function startQuestions () {
+    startButton.classList.add('hide');
+    displayQuestions();
+    
+  }
+
+  // When user clicks start button, show the first flash card
+
+  nextBtn.addEventListener('click', displayQuestions);

@@ -10,12 +10,14 @@
 
 <body>
     
-    <section id="front-page" class= "hide"></section>
-        <h1 id="main-header" class="hide">
+    <section id="front-page"></section>
+        <h1 id="main-header" class="text-center">
         Coding Quiz Time!
         </h1>
-     
-            <p class="front-page-text hide">
+
+        <h4 id="score">High Scores</h4>
+
+            <p class="front-page-text text-center">
                 Press the start button to take this coding quiz challenge to test your code knowledge. When you press start a 
                 timer will start counting down at 100 seconds and you will be prompted with multiple choice questions about
                 coding to answer. If you get an answer incorrect five seconds will be deducted off of the clock. If you get a question
@@ -26,25 +28,28 @@
             </p>
     </section>
     
-    <section class="question-wrap hide">
-        <button id="start-button" class="hide">Start</button>
-        
-        <h2 id="question-display hide"></h2>
-            <ul class="display-answers hide">
-                <li id="A"></li>
-                <li id="B"></li>
-                <li id="C"></li>
-                <li id="D"></li>
+    <section class="question-wrap text-center">
+        <button id="start-button">Start</button>
+            <div class="question-container"></div>
+            <ul class>
+                <li class="display-answers hide" id="A">A</li>
+                <li class="display-answers hide" id="B">B</li>
+                <li class="display-answers hide" id="C">C</li>
+                <li class="display-answers hide" id="D">D</li>
             </ul>
-
-         <h2 id="timer-display">5</section>
-    
-    <section id="answer-display"></section>
             
             <h2 class="correct-answer hide">Correct!</h2>
             <h2 class="wrong-answer hide">Wrong!</h2>
+
+         <button id="next-button" class="hide">Next</button>
+         
+         <h2 id="timer-display">Time: 5</h2>
+    
+    <section id="answer-display"></section>
             
-            <button id="next-button" class="hide">Next</button>
+            
+            
+            
     </section>
     
     <script src="Develop/question_shuffle.js"></script>
