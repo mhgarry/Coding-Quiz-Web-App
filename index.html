@@ -9,47 +9,74 @@
 </head>
 
 <body>
+    <main>
+       
+    <div class="first-container">
+        <section class="front-page">
+            <h1 class="main-header">Time for a Coding Quiz!</h1>
+            
+            <section id="timer">
+                <div id="count">
+                    Time: 
+                </div>
+            </section>
+
+            <section id="stats">
+                <div id="current-score">Score: </div>
+                <div id="high-score">high scores</div>
+               
+            </section>
+
+            <section id="welcome-text">
+                <p class="front-page-text text-center">
+                    Press the start button to take this coding quiz challenge to test your code knowledge. When you press start a 
+                    timer will start counting down at 100 seconds and yo will be prompted with multiple choice questions about
+                    coding to answer. If you get an answer incorrect five seconds will be deducted off of the clock. If you get a question
+                    correct you will earn five points. After answering a question correctly press the next button to proceed to 
+                    the next question. When you answer a question wrong you will be automatically cycled to a new question. 
+                    The quiz ends when either you run out of time or go through all of the questions. At the end of the quiz you'll be 
+                    prompted to enter your intials to store with your score.
+                </p>
+
+            <section id="start">
+                    <!--create a click event to call run startQuiz() funciotn that starts the quiz when I press start button-->
+                    <button id="start-button" onclick="startQuiz('string')">Start!</button>
+            </section>
+
+        </section>
+
+    </div>
+
+    <div class="second-container hide">
+        <!--https://www.google.com/search?q=how+to+make+a+multiple+choice+question+and+answer+box+in+javascript+array&rlz=1C1VDKB_enUS1049US1049&sxsrf=AJOqlzXtNfIudP-ls65VX08RyPEn5RKuEg%3A1679078537217&ei=ibQUZObxDLrk5NoP6bmAkAU&ved=0ahUKEwim2or-zuP9AhU6MlkFHekcAFIQ4dUDCBE&uact=5&oq=how+to+make+a+multiple+choice+question+and+answer+box+in+javascript+array&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzoKCAAQRxDWBBCwA0oECEEYAFCtAViZCmDMDWgBcAF4AIABS4gBkwOSAQE2mAEAoAEByAEIwAEB&sclient=gws-wiz-serp#fpstate=ive&vld=cid:53977a99,vid:49pYIMygIcU used as reference and paraphrased-->
+        <!--this will be where the main content of our quiz shows up-->
+        <section class="quiz-box">
+            
+            <!--we'll put our questions from arrayinto this div-->
+            <section id="questions-display"></section>
+            <!--We'll store our options below here-->
+                <section class="answers-display">
+                <!--we'll put our variables for our array here and call the function
+                check answer on click to give us a true or false variable-->
+                    <button class="option" id="A" onclick="checkAnswer('A')"></button>
+                    <button class="option" id="B" onclick="checkAnswer('B')"></button>
+                    <button class="option" id="C" onclick="checkAnswer('C')"></button>
+                    <button class="option" id="D" onclick="checkAnswer('D')"></button>
+            </section>
+
+            <section id="next">
+                    <button>Next</button>
+            </section>
+            
+            <section class="feedback">
+                <div class="correct hide">Correct!!</div>
+                <div class="incorrect hide">Inocrrect!</div>
+            </section>
+       </section>
     
-    <section id="front-page"></section>
-        <h1 id="main-header" class="text-center">
-         Coding Quiz Time!
-        </h1>
-
-        <h4 id="score">High Scores</h4>
-
-            <p class="front-page-text text-center">
-                Press the start button to take this coding quiz challenge to test your code knowledge. When you press start a 
-                timer will start counting down at 100 seconds and you will be prompted with multiple choice questions about
-                coding to answer. If you get an answer incorrect five seconds will be deducted off of the clock. If you get a question
-                correct you will earn five points. After answering a question correctly press the next button to proceed to 
-                the next question. When you answer a question wrong you will be automatically cycled to a new question. 
-                The quiz ends when either you run out of time or go through all of the questions. At the end of the quiz you'll be 
-                prompted to enter your intials to store with your score.
-            </p>
-    </section>
-    
-    <section class="question-wrap text-center">
-        <button id="start">Start</button>
-            <div class="display-questions"></div>
-            
-            
-            
-         <button id="next-button" class="hide">Next</button>
-         
-         <h2 id="timer-display">Time: 5</h2>
-         <h2 class="correct-answer hide">Correct!</h2>
-            <h2 class="wrong-answer hide">Wrong!</h2>
-
-  
-            
-            
-            
-            
-    </section>
-    
-    <script src="Develop/question_shuffle.js"></script>
-    <script src="Develop/script.js"></script>
-
+    </div>
+     <script src="Develop/script.js"></script>
+   </main>
 </body>
 
 </html>
