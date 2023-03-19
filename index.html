@@ -22,7 +22,7 @@
             </section>
 
             <section id="stats">
-                <div id="current-score">Score: </div>
+                <div id="user-score">Score: </div>
                 <div id="high-score">high scores</div>
                
             </section>
@@ -40,7 +40,9 @@
 
             <section id="start">
                     <!--create a click event to call run startQuiz() funciotn that starts the quiz when I press start button-->
-                    <button id="start-button" onclick="startQuiz('string')">Start!</button>
+                    <button id="start-button" onclick="getQuestion()">
+                        Start!
+                    </button>
             </section>
 
         </section>
@@ -53,7 +55,7 @@
         <section class="quiz-box">
             
             <!--we'll put our questions from arrayinto this div-->
-            <section id="questions-display"></section>
+            <p id="questions-display"></p>
             <!--We'll store our options below here-->
                 <section class="answers-display">
                 <!--we'll put our variables for our array here and call the function
