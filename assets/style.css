@@ -123,10 +123,6 @@
 }
 
 
-#questions-display {
-    min-height: 4rem;
-}
-
 .answers-display {
     display: flex;
     flex-direction: column;

@@ -11,14 +11,13 @@
 <body>
     <main>
        
-    <div class="first-container">
-        <section class="front-page">
+        <section id="first-page">
             <h1 class="main-header">Time for a Coding Quiz!</h1>
             
-            <section id="timer">
-                <div id="count">
-                    Time: 
-                </div>
+            <section id="show-time">
+                    <div id="count">
+                        Time: 
+                    </div>
             </section>
 
             <section id="stats">
@@ -40,43 +39,38 @@
 
             <section id="start">
                     <!--create a click event to call run startQuiz() funciotn that starts the quiz when I press start button-->
-                    <button id="start-button" onclick="getQuestion()">
+                    <button id="start-button">
                         Start!
                     </button>
             </section>
 
         </section>
-
-    </div>
-
-    <div class="second-container hide">
-        <!--https://www.google.com/search?q=how+to+make+a+multiple+choice+question+and+answer+box+in+javascript+array&rlz=1C1VDKB_enUS1049US1049&sxsrf=AJOqlzXtNfIudP-ls65VX08RyPEn5RKuEg%3A1679078537217&ei=ibQUZObxDLrk5NoP6bmAkAU&ved=0ahUKEwim2or-zuP9AhU6MlkFHekcAFIQ4dUDCBE&uact=5&oq=how+to+make+a+multiple+choice+question+and+answer+box+in+javascript+array&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzoKCAAQRxDWBBCwA0oECEEYAFCtAViZCmDMDWgBcAF4AIABS4gBkwOSAQE2mAEAoAEByAEIwAEB&sclient=gws-wiz-serp#fpstate=ive&vld=cid:53977a99,vid:49pYIMygIcU used as reference and paraphrased-->
         <!--this will be where the main content of our quiz shows up-->
-        <section class="quiz-box">
-            
-            <!--we'll put our questions from arrayinto this div-->
-            <p id="questions-display"></p>
-            <!--We'll store our options below here-->
-                <section class="answers-display">
-                <!--we'll put our variables for our array here and call the function
-                check answer on click to give us a true or false variable-->
-                    <button class="option" id="A" onclick="checkAnswer('A')"></button>
-                    <button class="option" id="B" onclick="checkAnswer('B')"></button>
-                    <button class="option" id="C" onclick="checkAnswer('C')"></button>
-                    <button class="option" id="D" onclick="checkAnswer('D')"></button>
-            </section>
-
-            <section id="next">
+        <!--we'll make this section hidden until start button is clicked-->
+        <section id="display-box" ></section>
+            <!--We'll store question title-->
+                `<h2 id="question-title"></h2>
+            <!-- we'll store the answer choices here -->
+                 <div id="choices"></div>
+        
+                 <section id="next" class="hide">
                     <button>Next</button>
-            </section>
-            
-            <section class="feedback">
-                <div class="correct hide">Correct!!</div>
-                <div class="incorrect hide">Inocrrect!</div>
-            </section>
-       </section>
-    
-    </div>
+             </section>
+        
+        
+        </section>
+        <!-- //shows screen at end of quiz showing score and asking them to log their high score -->
+        <section id="end-screen" class="end-screen hide">
+            <h2>Please Log Your Score!</h2>
+            <p>Your score is</p>
+            <p>
+                Enter your intials here: <input type="text" id="intials" max="3/">
+                <button id="final-score" class="final-score"></button>
+            </p>
+        </section>
+       
+    <!-- added questions array script before my other script so it'll intialize first -->
+     <script src="Develop/questions.js"></script>
      <script src="Develop/script.js"></script>
    </main>
 </body>
