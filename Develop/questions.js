@@ -1,6 +1,5 @@
 //moved array of questions, options, and answers to seperate sprict file to make it more scalable. Reformatted it and added a radio button to each option 
-
-let questionsArr = [
+const questionsArr = [
     {
       question: "What is HTML's main use in Wev Development?",
       answers: [
@@ -13,7 +12,7 @@ let questionsArr = [
     {
     question: 
     "What is it called when Web Developers organize code in a readable and functional manner?",
-    choices: 
+    answers: 
     [
       { Option: "JavaScript", correct: false }, 
       {Option: "API", correct: false},
@@ -25,7 +24,7 @@ let questionsArr = [
     {
       question:
        "In JavaScript which of the following is not a primative values?",
-      choices: 
+      answers: 
       [
         {Option: "Number", correct: false},
         {Option: "Function", correct: true},
@@ -36,7 +35,7 @@ let questionsArr = [
     {
       question: 
       "In CSS which of the following are used as selectors?",
-      choices: 
+      answers: 
       [
       {Option: "ID", correct: true},
       {Option: "Class", correct: false},
@@ -48,7 +47,7 @@ let questionsArr = [
     {
       question: 
       'What is the planning and drawing out the design of a website before being built called?',
-      choices: 
+      answers: 
       [
       {Option: "Keyframing", correct: false},
       {Option: "Githubbing", correct: false},
@@ -60,7 +59,7 @@ let questionsArr = [
        //paraphrased and forumlated from https://developer.mozilla.org/en-US/docs/Glossary/Element
       question:
        'What is a typical element in Web Design?',
-      choices: 
+      answers: 
       [
       {Option: "A key value pair", correct: false},
       { Option: "Any part of a webpage that includes an opening tag with attrtirutes, encolsoed text, and a closing tag", correct: true},
@@ -72,7 +71,7 @@ let questionsArr = [
       //paraphrased from https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories
       question: 
       'A github repository is?',
-      choices: 
+      answers: 
       [
       {Option: "Cointains all fo your project's files and revision history", correct: true},
       {Option: "Syntax", correct: false},
@@ -86,7 +85,7 @@ let questionsArr = [
       //https://www.hackreactor.com/blog/what-is-javascript-used-for paraphrased and referenced
       question: 
       'JavaScript is?',
-      choices: 
+      answers: 
       [
       {Option: "A cilent-side and server-side programming language that allows you to make web pages interactive", correct: true},
      {Option: "A web application", correct: false},
@@ -99,7 +98,7 @@ let questionsArr = [
       //https://www.git-tower.com/learn/git/faq/git-bash#:~:text=Git%20Bash%2C%20quite%20simply%2C%20is,built%20for%20Unix%2Dstyle%2
       question: 
       '"What is Git Bash?"',
-      choices: 
+      answers: 
     [
     {Option: "A Mac OSX application", correct: false},
     {Option: "A server designated for party chat", correct: false},
@@ -111,7 +110,7 @@ let questionsArr = [
     {
       question: 
       "What is a web application?", 
-      choices: 
+      answers: 
     [{Option: "A program downloaded from the internet that runs on your local system", correct: false},
     {Option: "A browser based flash file", correct: false},
     {Option: "An iphone accesory", correct: false},

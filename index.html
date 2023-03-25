@@ -47,24 +47,19 @@
         </section>
         <!--this will be where the main content of our quiz shows up-->
         <!--we'll make this section hidden until start button is clicked-->
-        <section id="display-box" ></section>
-            <!--We'll store question title-->
-                `<h2 id="question-title"></h2>
-            <!-- we'll store the answer choices here -->
-                 <div id="choices"></div>
-        
-                 <section id="next" class="hide">
-                    <button>Next</button>
-             </section>
-        
-        
-        </section>
+            <section id="display-box" style="display: none">
+            <div id="question-title"></div>
+            <div id="choices"></div>
+            <button id="next">Submit Answer</button>
+            </section>
+
+                  
         <!-- //shows screen at end of quiz showing score and asking them to log their high score -->
-        <section id="end-screen" class="end-screen hide">
+        <section id="end-screen hide" class="end-screen hide">
             <h2>Please Log Your Score!</h2>
             <p>Your score is</p>
             <p>
-                Enter your intials here: <input type="text" id="intials" max="3/">
+                Enter your intials here: <input type="text" id="intials" max="3">
                 <button id="final-score" class="final-score"></button>
             </p>
         </section>
