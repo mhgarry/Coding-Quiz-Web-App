@@ -13,8 +13,7 @@ let score = 0;
 
 let timer;
 
-startBtn.addEventListener("click", startQuiz);
-submitBtn.addEventListener("click", checkAnswer);
+
 //starts our quiz by hiding the start button and intro paragraph as well as starting the timer 
 async function startQuiz() {
   let timer = 100;
@@ -40,13 +39,16 @@ const countdown = setInterval(async function () {
       buildQuiz();
 }
 
-//a variable to keep track of current question indexed 
+
 
 //made a funciton to put together the quiz using the questionsArr array data
 function buildQuiz() {
   // get the current question and its answers from the array
-      let questions = questionsArr
-      let currentQuestion = [0];
+      //a variable to keep track of current question indexed 
+      
+    const questions = questionsArr;
+    const currentQuestion = [0]
+
   
   const currentQ = questions[currentQuestion];
   const qText = currentQ.question;
@@ -55,7 +57,7 @@ function buildQuiz() {
   // display the current question
   document.getElementById("question-title").textContent = qText;
   
-  // create radio buttons for each answer choice
+  // create radio buttons for each answer choice I can't currently get this to work 
   const choiceDisplay = document.getElementById("choices");
   choiceDisplay.innerHTML = '';
   for (let i = 0; i < aChoices.length; i++) {
@@ -65,7 +67,7 @@ function buildQuiz() {
     radio.name = 'answers' + currentQuestion;
     radio.value = aChoices[currentQuestion];
     label.appendChild(radio);
-    label.appendChild(document.createTextNode(aChoices[i]));
+    label.appendChild(document.createTextNode(aChoices[currentQuestion]));
     choiceDisplay.appendChild(label);
   }
 }
@@ -97,3 +99,5 @@ function endQuiz() {
   quizContainer.style.display = 'none';
   document.getElementById('result').textContent = 'You scored ' + score + ' out of ' + questions.length;
 }
+startBtn.addEventListener("click", startQuiz);
+submitBtn.addEventListener("click", checkAnswer);
