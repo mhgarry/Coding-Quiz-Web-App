@@ -41,18 +41,19 @@ function startTimer() {
     }
   }, 1000);
 }
-
+//take time of the timer
 function countDown() {
   time--;
 }
-
+//render qustions with show question
 function showQuestions() {
   questionTitles.textContent = questionsArr[currentQuestionIndex].question;
+
 }
 
 function renderQuestion() {
   showQuestions();
 }
-
-document.addEventListener("click", startQuiz)
+//start the quiz with quiz button
+document.addEventListener("click", startQuiz);
 
