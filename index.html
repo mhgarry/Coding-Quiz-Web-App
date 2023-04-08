@@ -6,60 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz App</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <main>
-       
         <section id="first-page">
-            <h1 class="main-header">Time for a Coding Quiz!</h1>
-            
-            <section id="show-time">
-                    <div id="count">
-                        Time: 
-                    </div>
-            </section>
+            <h1 id="main-header">Time for a Coding Quiz!</h1>
 
-            <section id="stats">
-                <div id="user-score">Score: </div>
-                <div id="high-score">high scores</div>
-               
-            </section>
+            <section id="stats"><a href="score.html">View Highscores</a></section>
 
-            <section id="welcome-text">
-                <p class="front-page-text text-center">
-                    Press the start button to take this coding quiz challenge to test your code knowledge. When you press start a 
-                    timer will start counting down at 100 seconds and yo will be prompted with multiple choice questions about
-                    coding to answer. If you get an answer incorrect five seconds will be deducted off of the clock. If you get a question
-                    correct you will earn five points. After answering a question correctly press the next button to proceed to 
-                    the next question. When you answer a question wrong you will be automatically cycled to a new question. 
-                    The quiz ends when either you run out of time or go through all of the questions. At the end of the quiz you'll be 
-                    prompted to enter your intials to store with your score.
-                </p>
+            <section class="count">Time: <span id="time">0</span></section>
+			<section id="welcome-text" class="start"></section>
+                    <p id="welcome">
+                        Press the start button to take this coding quiz challenge to test your code knowledge. When you press start a
+                        timer will start counting down at 100 seconds and yo will be prompted with multiple choice questions about
+                        coding to answer. If you get an answer incorrect five seconds will be deducted off of the clock. If you get a question
+                        correct you will earn five points. After answering a question correctly press the next button to proceed to
+                        the next question. When you answer a question wrong you will be automatically cycled to a new question.
+                        The quiz ends when either you run out of time or go through all of the questions. At the end of the quiz you'll be
+                        prompted to enter your intials to store with your score.
+                    </p>
+                    <button id="start-button">Start!</button>
+                </section>
 
-            <section id="start">
-                    <!--create a click event to call run startQuiz() funciotn that starts the quiz when I press start button-->
-                    <button id="start-button">
-                        Start!
-                    </button>
-            </section>
+            <section class="container"></section>
 
+
+        <section id="quiz-container" class="hidden">
+                <section id="quiz" class=""></section>
+                    <h1 id="question-titles"></h1>
+                    <section id="answer-choices" class="choices"></section>
+                    <button id="next" class="hidden">Next Question</button>
+                </section>
+
+            <section id="end-quiz" class="hidden"></section>
+                    <h2 id="log" class="hidden">Please Log Your Score!</h2>
+                    <p id="scorez"class="hidden">your final score is <span id="user-score"></span>.</p>
+                    <p id="intialsData" class="hidden">
+                        Enter intials: <input type="text" id="initials" max="3" />
+                        <button id="log-score">Submit</button>
+                    </p>
+                </section>
+
+                <section id="feedback" class="feedback hide"></section>
         </section>
-        <!--this will be where the main content of our quiz shows up-->
-        <!--we'll make this section hidden until start button is clicked-->
-         <section id="display-box">
-                <div id="question-title"></div>
-                <div id="choices"></div>
-                <button id="submit">Submit Answer</button>
-        </section>
-
-                  
-       
-    <!-- added questions array script before my other script so it'll intialize first -->
-     <script src="questions/questions.js"></script>
-     <script  src="Develop/script.js"></script>
-   </main>
+    </main>
+    <script  src="Develop/script.js"></script>
 </body>
-
 </html>
