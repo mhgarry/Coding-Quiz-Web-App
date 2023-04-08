@@ -1,7 +1,7 @@
 //moved array of questions, options, and answers to seperate sprict file to make it more scalable. Reformatted it and added a radio button to each option
 const questionsArr = [
     {
-      "question":"What is HTML's main use in Wev Development?",
+      "question":"What is HTML's main use in Web Development?",
 			"choices": ["Scripting", "Styling", "Debugging", "Structuring"],
 			"answer": 3
     },

@@ -1,3 +1,5 @@
+
+
 //our global variables
 let firstPage = document.getElementById("first-page");
 let mainHeader = document.getElementById("main-header");
@@ -8,6 +10,10 @@ let startBtn = document.getElementById("start-button");
 let quizContainer = document.getElementById("quiz-container");
 let questionTitles = document.getElementById("question-titles");
 let answerChoices = document.getElementById("answer-choices");
+let choiceA = document.getElementById("btn1")
+let choiceB = document.getElementById("btn2")
+let choiceC = document.getElementById("btn3")
+let choiceD = document.getElementById("btn4")
 let nextBtn = document.getElementById("next");
 let submitBtn = document.getElementById("log-score");
 
@@ -25,6 +31,10 @@ function startQuiz() {
   quizContainer.removeAttribute("class");
   questionTitles.removeAttribute("class");
   answerChoices.removeAttribute("class");
+	choiceA.removeAttribute("class")
+	choiceB.removeAttribute("class")
+	choiceC.removeAttribute("class")
+	choiceD.removeAttribute("class")
   nextBtn.removeAttribute("class");
   submitBtn.removeAttribute("class");
   startTimer();
@@ -46,8 +56,12 @@ function countDown() {
   time--;
 }
 //render qustions with show question
-function showQuestions() {
+function showQuestions(choices) {
   questionTitles.textContent = questionsArr[currentQuestionIndex].question;
+	choiceA.innerHTML = questionsArr[currentQuestionIndex].choices[0]
+	choiceB.innerText = questionsArr[currentQuestionIndex].choices[1]
+	choiceC.innerText = questionsArr[currentQuestionIndex].choices[2]
+	choiceD.innerText = questionsArr[currentQuestionIndex].choices[3]
 
 }
 
@@ -56,4 +70,3 @@ function renderQuestion() {
 }
 //start the quiz with quiz button
 document.addEventListener("click", startQuiz);
-
