@@ -127,7 +127,7 @@ let highScore = document.getElementById("stats")
 let timer = document.getElementById("time")
 let welcomeText = document.getElementById("welcome")
 let startBtn = document.getElementById("start-button")
-let container = document.getElementById("quiz-container")
+let quizContainer = document.getElementById("quiz-container")
 let questionsTitles = document.getElementById("question-titles")
 let answerChoices = document.getElementById("answer-choices")
 let nextBtn = document.getElementById("next")
@@ -144,15 +144,31 @@ function startQuiz() {
 	mainHeader.setAttribute("class", "hidden")
 	welcomeText.setAttribute("class", "hidden")
 	startBtn.setAttribute("class", "hidden")
-	container.removeAttribute("class")
+	quizContainer.removeAttribute("class")
 	questionsTitles.removeAttribute("class")
 	answerChoices.removeAttribute("class")
 	nextBtn.removeAttribute("class")
 	submitBtn.removeAttribute("class")
-	timerId = setInterval(time, 1000)
+	timer= setInterval(time, 1000)
+	timer = document.getElementById('time')
 
-	timer.textContent = time
-
+	//call function to start timer
+	startTimer()}
+//make function to start timer
+function startTimer() {
+	timerId = setInterval(function() {
+		time--;
+		timer.textContent = time;
+		if (time <= 0) {
+			clearInterval (timerId);
+		}
+	}, 1000);
+	showQuestions()
 }
+//make a function to show the questions
 
-document.getElementById("start-button").addEventListener("click", startQuiz)
+document.addEventListener("click", function(event){
+	if (event.target.matches("button")){
+		startQuiz()
+	}
+})
