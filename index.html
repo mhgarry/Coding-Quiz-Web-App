@@ -46,19 +46,26 @@
 					 </section>
 
 
-            <section id="end-quiz" class="hidden"></section>
-                    <h2 id="log" class="hidden">Please Log Your Score!</h2>
-                    <p id="scorez"class="hidden">your final score is <span id="user-score"></span>.</p>
-                    <p id="intialsData" class="hidden">
-                        Enter intials: <input type="text" id="initials" max="3" />
-                        <button id="log-score">Submit</button>
-                    </p>
-                </section>
+    	<section id="scores-page" class="hidden">
+				<header>
+				<h2>High Scores</h2>
+				</header>
+				<ul id="score-list"></ul>
+			</section>
 
-                <section id="feedback" class="feedback hide"></section>
-        </section>
-    </main>
-	<script  src="Develop/questions.js"></script>
+      <section id="end-quiz" class="hidden">
+      	<header>
+       	<h2>Game Over</h2>
+      	</header>
+      	<p id="final-score"></p>
+    	<form>
+        <label for="initials">Enter your initials:</label>
+      	<input type="text" id="initials" name="initials" required>
+        <button type="submit">Save</button>
+      </form>
+    </section>
+  </main>
+		<script  src="Develop/questions.js"></script>
     <script  src="Develop/script.js"></script>
 </body>
 </html>

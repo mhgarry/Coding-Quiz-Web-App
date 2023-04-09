@@ -1,113 +1,133 @@
-/**universal selectors to put on whole page**/
-body {
-    margin: 0px;
-    font-family: 'Varela Round', sans-serif;
-    display: flex;
-    flex: row;
-    justify-content: space-around;
-    align-content: space-between;
+/* Universal selectors to apply to the whole page */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+	font-family: 'News Cycle', sans-serif;
+}
 
-    background-color: #59A6BA;
-    color: #1D6D9B  ;
-    }
+body {
+  background-color: #59A6BA;
+  color: #1D6D9B;
+  font-family: 'News Cycle', sans-serif;
+}
 
 .hidden {
-    display: none;
+  display: none;
+}
+
+/* Header */
+#header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+	text-align: center;
+}
+
+#start-button {
+  align-items: center;
+  color: purple;
+  cursor: grab;
+	font-size: 2rem;
+  justify-content: center;
+  min-height: 200px;
+
+  text-align: center;
 
 }
 
+/* First page */
 #first-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: space-between;
-    background: #C9A68D;
-    text-align: center;
-    border: solid black .03rem;
+  align-items: space-between;
+  background-color: #C9A68D;
+  border: solid black 0.03rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.main-header {
+  color: #003862;
+  font-size: 4rem;
+}
+
+#stats a {
+  color: purple;
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-left: 20px;
+}
+
+#welcome-text {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
 
 }
 
-.main-header{
-    color: #003862;
-    font-size: 4rem;
-}
-#stats a{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin-left: 20px;
-    font-size: .8rem;
-    text-decoration: none;
-    color: purple;
-    margin-bottom: 20px;
-
-}
-.timer{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin-left: 20px;
+#welcome-text p {
+  color: #1D6D9B;
+  font-size: 2rem;
+	margin-bottom: 200px;
 }
 
-#welcome-text{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    }
-#welcome-text p{
-    color: #1D6D9B;
-    font-size: 2rem;
-}
-#start-button{
-    min-height: 200px;
-    cursor: grab;
-    color: purple;
-    font-size: 2rem;
-}
-#quiz-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 500px;
-    min-width: 500px;
-    background-color: #1D6D9B;
-    color: white;
-		width: 100%;
-  	height: 100%;
-  	margin: 0;
-  	padding: 0;
-
+/* Quiz */
+#quiz-container {
+  align-items: center;
+  background-color: #1D6D9B;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  min-height: 500px;
+  min-width: 500px;
+  padding: 0;
+  width: 100%;
 }
 
-.choice-list{
-	align-content: center;
-	justify-content: left;
+.choice-list {
+  align-content: center;
+  justify-content: left;
 }
 
-.li{
-	justify-content: left;
-	padding: 10px;
-	list-style:upper-roman;
+.li {
+  justify-content: left;
+  list-style: upper-roman;
+  padding: 10px;
 }
-.choice-btn{
-	align-items: center;
-	justify-items: center;
-	min-width: 100px;
-	min-height: 40px;
-	background-color:#59A6BA;
-	border-radius: 12px;
-	border: #ffffff 1px solid;
-	color: purple;
 
+.choice-btn {
+  align-items: center;
+  background-color: #59A6BA;
+  border: #ffffff 1px solid;
+  border-radius: 12px;
+  color: purple;
+  display: flex;
+  justify-items: center;
+  min-height: 40px;
+  min-width: 100px;
 }
-#next{
-    min-height: 40px;
-    min-width: 80px;
-    background-color: #FFFFFf;
-    color: purple;
-		align-items: center;
+
+#next {
+  align-items: center;
+  background-color: #FFFFFf;
+  color: purple;
+  min-height: 40px;
+  min-width: 80px;
+
 }
