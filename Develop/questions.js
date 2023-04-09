@@ -13,8 +13,9 @@ const questionsArr = [
     },
       //https://www.w3schools.com/java/java_data_types_non-prim.asp#:~:text=A%20primitive%20type%20has%20always,have%20all%20the%20same%20size.
     {
-      "question:":"In JavaScript which of the following is not a primative values?",
-      "choices":["Number", "Function","Boolean",  "String"],
+      "question":
+			"In JavaScript which of the following is not a primative values?",
+      "choices":["Number", "Function","Boolean","String"],
 			"answer": 1
 		},
     {
