@@ -21,7 +21,22 @@ Still not working 100% correctly and will continue to work on this application a
 need to make a function to log scores as well
 
 ## Features
-This app is an interactive coding quiz that cycles through questions 
+This app is an interactive coding quiz that cycles through questions and answers to save them on the screen and then end and display a user score input box and a high score save box with the users initials.
 
-## Screenshots 
-				
+## Credits
+Tutoring session with Janvier Mblizi 
+In class help by instructor JD Tadlock 
+various sources cited in quiz javascript where I got questions from 
+
+## License
+MIT License
+## Screenshots
+![Alt text][screenshot of quiz questions]
+
+[screenshot of quiz questions]: assets/images/Screenshot%202023-04-09%20183117.png
+![Alt text][Screenshot of starting page]
+
+[Screenshot of starting page]: assets/images/Screenshot%202023-04-09%20183051.png
+![Alt text][Screenshot of endscreen]
+
+[Screenshot of endscreen]: assets/images/Screenshot%202023-04-09%20183134.png
