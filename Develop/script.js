@@ -10,13 +10,13 @@ const questionTitles = document.getElementById("question-title");
 const choiceList = document.getElementById("choice-list");
 const choiceBtn = document.querySelectorAll(".choice-btn")
 const nextBtn = document.getElementById("next");
-const submitBtn = document.getElementById("submit");
+let submitBtn = document.getElementById("submit");
 const finalScreen = document.getElementById("end-quiz")
 //array variables setting question index to move through our array. Score to add and subtract scores. and time for 10 seconds each question
 //we make a timerId to store our current time
 let currentQuestionIndex = 0;
 let score = 0;
-let time = questionsArr.length * 10;
+let time = 60;
 let timerId;
 //make function to hide elements I want hidden on dom and start timer and show questions
 function startQuiz() {
@@ -79,9 +79,40 @@ function endQuiz() {
   finalScreen.removeAttribute("class", "hidden");
   submitBtn.addEventListener("click", logScore);
 }
+//log score to local storage
+function logsScore(){
+	const initialsInput = document.getElementById("initials");
+	const initials =  initialsInput.value.trim()
+
+	if (initials === 3){
+			return initials
+	}
+
+	const scoreObj = {initials, score};
+	const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+	highScores.push(scoreObj);
+	localStorage.setItem("highScores", JSON.stringify(highScores));
+	renderHighScores()
+}
 //adds an event listener to each choice to keep track of score
-choiceBtn.forEach(function (choice) {
-  choice.addEventListener("click", choiceInput);
+submitBtn = document.getElementById('submit-score');
+submitBtn = addEventListener("click", logScore);
+
+function renderHighScores (){
+	 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+	 highScores.sort((a,b ) => b.score -a.score);
+
+	let html = `<h2>High Scores<h2> +
+							<ol>`
+							for(let i = 0; i < highScores.length; i++){
+								html += `<li>${highScores[i].initials}: ${highScores[i],score}</li>`
+							}
+							html += `<ol>`;
+							highScore.innerHTML = html
+}
+
+choiceBtn.forEach(function (choiceList) {
+  choiceList.addEventListener("click", choiceInput);
 });
 
 //will be a function to log score in local storage

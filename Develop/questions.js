@@ -1,4 +1,9 @@
 //moved array of questions, options, and answers to seperate sprict file to make it more scalable. Reformatted it and added a radio button to each option
+//https://www.w3schools.com/html/html_forms.asp#:~:text=The%20HTML%20%3Cform%3E%20element,form%20is%20submitted%20to%20a%20page.
+//https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+//https://www.w3schools.com/jsref/met_document_createtextnode.asp
+//https://www.w3schools.com/jsref/met_document_createelement.asp
+//https://www.w3
 const questionsArr = [
     {
       question:"What is HTML's main use in Web Development?",

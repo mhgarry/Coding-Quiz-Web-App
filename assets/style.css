@@ -111,16 +111,19 @@ body {
   padding: 10px;
 }
 
-.choice-btn {
-  align-items: center;
+
+  .choice-btn {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+	align-items: center;
   background-color: #59A6BA;
   border: #ffffff 1px solid;
   border-radius: 12px;
   color: purple;
-  display: flex;
-  justify-items: center;
-  min-height: 40px;
-  min-width: 100px;
+
+
 }
 
 #next {
